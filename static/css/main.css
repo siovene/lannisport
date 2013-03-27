@@ -47,7 +47,7 @@ body {
 
 .container > header p img {
     position: absolute;
-    top: -.45rem;
+    top: -.35rem;
     right: -3.5rem;
 }
 
@@ -141,6 +141,10 @@ ul {
     -o-text-size-adjust:none;
     -webkit-text-size-adjust:none;
     text-size-adjust:none
+}
+
+li {
+    line-height: 24px;
 }
 
 .container > footer {
