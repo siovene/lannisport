@@ -113,6 +113,17 @@ article header time:before {
     content: "\2014\A0";
 }
 
+article footer {
+    margin-top: 2rem;
+}
+
+article footer p {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
 blockquote,
 code,
 dl,
