@@ -1,16 +1,13 @@
-<section>
-    <article>
-        <header>
-            <h2><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h2>
-            <time datetime="{{article.date.isoformat()}}">{{article.locale_date}}</time>
-        </header>
+{% extends '_article_base.html' %}
 
-        {{article.content}}
+{% block article_content %}
+    {{article.content}}
+{% endblock %}
 
-        <footer>
-            <p>Posted in: <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a></p>
-            <p>Tagged as: {% for tag in article.tags %}<a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>{% if not loop.last %} / {% endif %}{% endfor %}</p>
-            <p>Wanna tell me what you think? <a href="{{SITEURL}}/pages/contact.html">Get in touch.</a></p>
-        </footer>
-    </article>
-</section>
+{% block article_footer %}
+    <footer>
+        <p>Posted in: <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a></p>
+        <p>Tagged as: {% for tag in article.tags %}<a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>{% if not loop.last %} / {% endif %}{% endfor %}</p>
+        <p>Wanna tell me what you think? <a href="{{SITEURL}}/pages/contact.html">Get in touch.</a></p>
+    </footer>
+{% endblock %}

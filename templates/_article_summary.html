@@ -1,13 +1,5 @@
-<section>
-    <article>
-        <header>
-            <h2><a href="{{SITEURL}}/{{article.url}}">{{article.title}}</a></h2>
-            <time datetime="{{article.date}}">{{article.date}}</time>
-        </header>
+{% extends '_article_base.html' %}
 
-        {{article.summary}}
-
-        <footer>
-        </footer>
-    </article>
-</section>
+{% block article_content %}
+    {{article.summary}}
+{% endblock %}
