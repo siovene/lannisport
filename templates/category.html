@@ -3,9 +3,14 @@
 {% block title %}{{ SITENAME }} <small>{{ category }}</small>{% endblock %}
 
 {% block content %}
+    <section>
     {% for article in dates %}
-        <a href="{{SITEURL}}/{{article.url}}">
-            {{article.title}}
-        </a>
+        <article>
+            <time datetime="{{article.date.isoformat()}}">{{article.date.year}}</time>:
+            <a href="{{SITEURL}}/{{article.url}}">
+                {{article.title}}
+            </a>
+        </article>
     {% endfor %}
+    </section>
 {% endblock %}
