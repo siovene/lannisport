@@ -4,6 +4,7 @@ html {
 
 body {
     background-image: url(../img/bg.png);
+    border-top: 0.35rem solid #666;
     color: #444;
 }
 
