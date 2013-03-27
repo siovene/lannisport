@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section>
-    <article>
-        <header>
-            <h2><a href="{{SITEURL}}/{{page.url}}">{{page.title}}</a></h2>
-        </header>
+    <section>
+        <article>
+            <header>
+                <h2>
+                    <a href="{{SITEURL}}/{{page.url}}" rel="bookmark">
+                        {{page.title}}
+                    </a>
+                </h2>
+            </header>
 
-        {{page.content}}
-
-        <footer>
-        </footer>
-    </article>
-</section>
+            {{page.content}}
+        </article>
+    </section>
 {% endblock %}
