@@ -38,7 +38,10 @@
             {% block content %}{% endblock %}
 
             <footer>
-                <p>&copy; {{SITENAME}}</p>
+                <p>
+                    &copy; {{SITENAME}} /
+                    <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
+                </p>
             </footer>
         </div> <!-- /container -->
 
