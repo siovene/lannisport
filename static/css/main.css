@@ -1,22 +1,150 @@
+html {
+    overflow-y: scroll;
+}
 
+body {
+    background-image: url(../img/bg.png);
+    color: #444;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+.container > section, .container > header, .container > footer {
+    width: 66.666666666%;
+    margin-bottom: 5rem;
+}
 
+.container > header h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    border-bottom: 1px dashed #e0e0e0;
+}
 
+.container > header h1 small {
+    font-size: 1rem;
+    color: #666;
+}
 
+.container > header h1 a {
+    color: #000;
+}
 
+.container > header p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #bbb;
+    position: relative;
+}
 
+.container > header p:before {
+    display: block;
+    content: "\201C";
+    font-size: 4rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 1.25rem;
+    color: #e4e4e4;
+}
 
+.container > header p img {
+    position: absolute;
+    top: -.45rem;
+    right: -3.5rem;
+}
 
+.container > header nav {
+    border-bottom: 1px dashed #e0e0e0;
+}
 
+.container > header nav ul {
+    margin: 0;
+}
 
+.container > header nav li {
+    display: inline;
+    margin-right: 0.875rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
 
+section p {
+    text-align: justify;
+}
 
+article,
+.container > header h1,
+.container > header p,
+.container > header nav,
+.container > footer p {
+    padding: 0 4rem;
+}
 
+article header {
+    margin-bottom: 2rem;
+}
 
+article header h2 {
+    font-weight: 700;
+    margin-bottom: 0;
+    position: relative;
+}
 
+article header h2:before {
+    display: block;
+    content: "\00b6";
+    font-size: 2rem;
+    position: absolute;
+    left: -1.75rem;
+    top: .25rem;
+    color: #e4e4e4;
+}
 
+article header h2 a {
+    color: #000000;
+}
 
+article header time {
+    color: #bbb;
+    font-style: italic;
+    margin-top: 0.5rem;
+    display: block;
+}
 
+article header time:before {
+    content: "\2014\A0";
+}
+
+blockquote,
+code,
+dl,
+h1,
+h2,
+h3,
+ol,
+p,
+pre,
+ul {
+    font:normal normal 400 1.125rem/1.5rem Georgia, serif;
+    list-style:none;
+    -moz-text-size-adjust:none;
+    -ms-text-size-adjust:none;
+    -o-text-size-adjust:none;
+    -webkit-text-size-adjust:none;
+    text-size-adjust:none
+}
+
+.container > footer {
+    margin-bottom: 0;
+}
+
+.container > footer p {
+    font-size: small;
+    color: #bbb;
+}
+
+ol.post-list {
+    margin: 0;
+}
+
+ol#post-list {
+    margin: 0;
+}

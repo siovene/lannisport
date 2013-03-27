@@ -22,12 +22,24 @@
         <![endif]-->
 
         <div class="container">
+            <header>
+                <h1>
+                    <a href="{{SITEURL}}">{{SITENAME}}</a>
+                    <small> / {{SITETAGLINE}}</small>
+                </h1>
+                <p>
+                    {{SITEDESCR}}
+                    <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
+                </p>
+
+                {% include 'navigation.html' %}
+            </header>
 
             {% block content %}{% endblock %}
+
             <footer>
                 <p>&copy; {{SITENAME}}</p>
             </footer>
-
         </div> <!-- /container -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

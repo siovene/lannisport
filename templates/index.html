@@ -1,4 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% for article in dates %}
+        {% include '_article_summary.html' %}
+    {% endfor %}
 {% endblock %}
