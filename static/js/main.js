@@ -2,7 +2,8 @@ jQuery(document).ready(function($) {
 	// Auto-handle direct jpeg links
 	$('a[href$="jpg"]').each(function() {
         $(this).colorbox({
-            width: '100%'
+            maxWidth: '100%',
+            maxHeight: '100%'
         });
 	});
 });
