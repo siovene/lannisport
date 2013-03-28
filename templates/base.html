@@ -29,7 +29,9 @@
                 </h1>
                 <p>
                     {{SITEDESCR}}
-                    <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
+                    <a href="{{SITEURL}}">
+                        <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
+                    </a>
                 </p>
 
                 {% include 'navigation.html' %}
@@ -39,8 +41,26 @@
 
             <footer>
                 <p>
-                    &copy; {{SITENAME}} /
+                    <a href="http://creativecommons.org/licenses/by-sa/2.5/" target="_blank">
+                        CC BY-SA 2.5
+                    </a> {{AUTHOR}} /
                     <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
+                </p>
+                <p>
+                    Powered by
+                    <a href="https://github.com/getpelican/pelican" target="_blank">
+                        Pelican
+                    </a>
+                    /
+                    Source code on
+                    <a href="http://github.com/siovene/iovene.com" target="blank">
+                        GitHub
+                    </a>
+                    /
+                    Theme by yours truly, also on
+                    <a href="http://github.com/siovene/lannisport" target="_blank">
+                        GitHub
+                    </a>
                 </p>
             </footer>
         </div> <!-- /container -->

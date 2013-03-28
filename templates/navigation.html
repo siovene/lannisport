@@ -4,11 +4,15 @@
             <ul>
                 <li>
                     <a href="{{SITEURL}}">Blog</a>
+                    <span class="separator">/</span>
                 </li>
 
                 {% for page in PAGES %}
                     <li>
                         <a href="{{SITEURL}}/{{page.url}}">{{page.title}}</a>
+                        {% if not loop.last %}
+                            <span class="separator">/</span>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>
