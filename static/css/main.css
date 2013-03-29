@@ -23,120 +23,109 @@ a:hover, a:active {
     text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
-    .container > section,
-    .container > header,
-    .container > footer {
-        width: 66.666666666%;
-    }
-}
-
-.container > section,
-.container > header,
-.container > footer {
+.content > section,
+#site-header, #site-footer {
     margin-bottom: 3rem;
 }
 
-.container > header h1 {
-    font-size: 1.25rem;
+#site-logo {
+    padding: 1.5rem 0;
+    margin-left: -3.75rem;
+}
+
+.content section {
+    background: url(/theme/img/divider.png) no-repeat center bottom;
+    padding-bottom: 3rem;
+}
+
+.content section:last-of-type {
+    background: none;
+    padding-bottom: 0;
+}
+
+.content section p {
+    text-align: justify;
+}
+
+#site-header h1 {
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 2.5rem;
     border-bottom: 1px dashed #e0e0e0;
-    padding-bottom: 1rem;
 }
 
-.container > header h1 small {
+#site-header h1 small {
     font-size: 1rem;
     color: #666;
 }
 
 @media screen and (max-width: 767px) {
-    .container > header h1 small {
+    #site-header h1 small {
         display: block;
     }
 
-    .container > header h1 small .divider {
+    #site-header h1 small .divider {
         display: none;
     }
 }
 
-.container > header h1 a {
+#site-header h1 a {
     color: #000;
 }
 
-.container > header p {
+#site-header p {
     font-size: 1rem;
     font-style: italic;
     color: #bbb;
     position: relative;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: .5rem;
 }
 
 @media screen and (min-width: 768px) {
-    .container > header p:before {
+    #site-header p:before {
         display: block;
         content: "\201C";
         font-size: 4rem;
         position: absolute;
-        left: .5rem;
+        left: -2.5rem;
         top: 1.25rem;
         color: #e4e4e4;
     }
 }
 
-@media screen and (min-width: 768px) {
-    .container > header p img {
-        position: absolute;
-        top: -1.2rem;
-        right: -5.5rem;
-    }
-}
-@media screen and (max-width: 767px) {
-    .container > header p img {
-        display: none;
-    }
+#sidebar {
+    background-image: url(../img/debut_dark.png);
+    padding: 0 2rem 1rem;
+    margin-top: -.5rem;
+
+    -webkit-border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
+
+    -webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
 }
 
-.container > header nav {
-    border-bottom: 1px dashed #e0e0e0;
-    padding-bottom: .5rem;
+#sidebar h2 {
+    color: #f0f0f0;
 }
 
-.container > header nav ul {
+#navigation nav ul {
     margin: 0;
 }
 
-.container > header nav li {
-    display: inline;
+#navigation nav li {
     font-size: 0.875rem;
     text-transform: uppercase;
 }
 
-.container > header nav li .separator {
-    padding: 0 .5rem;
+#navigation nav li .separator {
+    padding: .5rem 0;
     color: #999;
 }
 
-section {
-    background: url(/theme/img/divider.png) no-repeat center bottom;
-    padding-bottom: 3rem;
-}
-
-section:last-of-type {
-    background: none;
-    padding-bottom: 0;
-}
-
-section p {
-    text-align: justify;
-}
-
 @media screen and (min-width: 768px) {
-    article,
-    .container > header h1,
-    .container > header p,
-    .container > header nav,
-    .container > footer p,
-    .paginator {
+    #site-header, #site-footer, .content {
         padding: 0 3rem;
     }
 }
@@ -287,13 +276,13 @@ li {
     line-height: 24px;
 }
 
-.container > footer {
+#site-footer {
     margin-bottom: .75rem;
     padding-top: .75rem;
     border-top: 1px dashed #e0e0e0;
 }
 
-.container > footer p {
+#site-footer p {
     font-size: small;
     line-height: 1rem;
     color: #bbb;

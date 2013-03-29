@@ -24,49 +24,64 @@
         <![endif]-->
 
         <div class="container">
-            <header>
-                <h1>
-                    <a href="{{SITEURL}}">{{SITENAME}}</a>
-                    <small>
-                        <span class="divider">/</span> {{SITETAGLINE}}
-                    </small>
-                </h1>
-                <p>
-                    {{SITEDESCR}}
-                    <a href="{{SITEURL}}">
-                        <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
-                    </a>
-                </p>
+            <div class="row">
+                <div class="span8">
+                    <header id="site-header">
+                        <h1>
+                            <a href="{{SITEURL}}">{{SITENAME}}</a>
+                            <small>
+                                <span class="divider">/</span> {{SITETAGLINE}}
+                            </small>
+                        </h1>
+                        <p>
+                            {{SITEDESCR}}
+                        </p>
+                    </header>
 
-                {% include 'navigation.html' %}
-            </header>
+                    <div class="content">
+                        {% block content %}{% endblock %}
+                    </div>
 
-            {% block content %}{% endblock %}
+                    <footer id="site-footer">
+                        <p>
+                            <a href="http://creativecommons.org/licenses/by-sa/2.5/" target="_blank">
+                                CC BY-SA 2.5
+                            </a> {{AUTHOR}} /
+                            <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
+                        </p>
+                        <p>
+                            Powered by
+                            <a href="https://github.com/getpelican/pelican" target="_blank">
+                                Pelican
+                            </a>
+                            /
+                            Source code on
+                            <a href="http://github.com/siovene/iovene.com" target="blank">
+                                GitHub
+                            </a>
+                            /
+                            Theme by yours truly, also on
+                            <a href="http://github.com/siovene/lannisport" target="_blank">
+                                GitHub
+                            </a>
+                        </p>
+                    </footer>
+                </div> <!-- header+content+footer span -->
 
-            <footer>
-                <p>
-                    <a href="http://creativecommons.org/licenses/by-sa/2.5/" target="_blank">
-                        CC BY-SA 2.5
-                    </a> {{AUTHOR}} /
-                    <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
-                </p>
-                <p>
-                    Powered by
-                    <a href="https://github.com/getpelican/pelican" target="_blank">
-                        Pelican
-                    </a>
-                    /
-                    Source code on
-                    <a href="http://github.com/siovene/iovene.com" target="blank">
-                        GitHub
-                    </a>
-                    /
-                    Theme by yours truly, also on
-                    <a href="http://github.com/siovene/lannisport" target="_blank">
-                        GitHub
-                    </a>
-                </p>
-            </footer>
+                <div class="span4">
+                    <aside id="sidebar">
+                        <div id="site-logo">
+                            <a href="{{SITEURL}}">
+                                <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
+                            </a>
+                        </div>
+
+                        <div id="navigation">
+                            {% include 'navigation.html' %}
+                        </div>
+                    </aside>
+                </div> <!-- logo+navigation span -->
+            </div> <!-- row -->
         </div> <!-- /container -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
