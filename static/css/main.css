@@ -26,6 +26,11 @@ a:hover, a:active {
     text-decoration: none;
 }
 
+h1, h2 {
+    -webkit-text-shadow: 0 1px 2px #aaa;
+    text-shadow: 0 1px 2px #aaa;
+}
+
 .content > section,
 #site-header, #site-footer {
     margin-bottom: 3rem;
@@ -152,6 +157,9 @@ article header h2 {
         left: -1.75rem;
         top: .25rem;
         color: #e4e4e4;
+
+        -webkit-text-shadow: none;
+        text-shadow: none;
     }
 }
 
