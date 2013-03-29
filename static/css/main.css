@@ -23,11 +23,18 @@ a:hover, a:active {
     text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+    .container > section,
+    .container > header,
+    .container > footer {
+        width: 66.666666666%;
+    }
+}
+
 .container > section,
 .container > header,
 .container > footer {
-    width: 66.666666666%;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .container > header h1 {
@@ -35,11 +42,22 @@ a:hover, a:active {
     font-weight: 700;
     line-height: 2.5rem;
     border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 1rem;
 }
 
 .container > header h1 small {
     font-size: 1rem;
     color: #666;
+}
+
+@media screen and (max-width: 767px) {
+    .container > header h1 small {
+        display: block;
+    }
+
+    .container > header h1 small .divider {
+        display: none;
+    }
 }
 
 .container > header h1 a {
@@ -53,24 +71,34 @@ a:hover, a:active {
     position: relative;
 }
 
-.container > header p:before {
-    display: block;
-    content: "\201C";
-    font-size: 4rem;
-    position: absolute;
-    left: 1.5rem;
-    top: 1.25rem;
-    color: #e4e4e4;
+@media screen and (min-width: 768px) {
+    .container > header p:before {
+        display: block;
+        content: "\201C";
+        font-size: 4rem;
+        position: absolute;
+        left: .5rem;
+        top: 1.25rem;
+        color: #e4e4e4;
+    }
 }
 
-.container > header p img {
-    position: absolute;
-    top: -1.2rem;
-    right: -3.5rem;
+@media screen and (min-width: 768px) {
+    .container > header p img {
+        position: absolute;
+        top: -1.2rem;
+        right: -5.5rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container > header p img {
+        display: none;
+    }
 }
 
 .container > header nav {
     border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: .5rem;
 }
 
 .container > header nav ul {
@@ -90,19 +118,27 @@ a:hover, a:active {
 
 section {
     background: url(/theme/img/divider.png) no-repeat center bottom;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
+}
+
+section:last-of-type {
+    background: none;
+    padding-bottom: 0;
 }
 
 section p {
     text-align: justify;
 }
 
-article,
-.container > header h1,
-.container > header p,
-.container > header nav,
-.container > footer p {
-    padding: 0 4rem;
+@media screen and (min-width: 768px) {
+    article,
+    .container > header h1,
+    .container > header p,
+    .container > header nav,
+    .container > footer p,
+    .paginator {
+        padding: 0 3rem;
+    }
 }
 
 article header {
@@ -115,14 +151,16 @@ article header h2 {
     position: relative;
 }
 
-article header h2:before {
-    display: block;
-    content: "\00b6";
-    font-size: 2rem;
-    position: absolute;
-    left: -1.75rem;
-    top: .25rem;
-    color: #e4e4e4;
+@media screen and (min-width: 768px) {
+    article header h2:before {
+        display: block;
+        content: "\00b6";
+        font-size: 2rem;
+        position: absolute;
+        left: -1.75rem;
+        top: .25rem;
+        color: #e4e4e4;
+    }
 }
 
 article header h2 a {
@@ -170,19 +208,16 @@ pre,
 ul {
     font:normal normal 400 1.125rem/1.5rem Georgia, serif;
     list-style:none;
-    -moz-text-size-adjust:none;
-    -ms-text-size-adjust:none;
-    -o-text-size-adjust:none;
-    -webkit-text-size-adjust:none;
-    text-size-adjust:none
 }
 
 pre, code {
     font: normal normal 400 .75rem/1rem "Courier New", Courier, monospace;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .codehilite {
-    width: 50.8rem;
     margin: 1.5rem 0;
 }
 
@@ -266,7 +301,6 @@ li {
 }
 
 .paginator {
-    padding: 0 4rem;
     margin-bottom: 2rem;
     color: #999;
 }
