@@ -201,7 +201,8 @@ ul {
 
 pre, code {
     font: normal normal 400 .75rem/1rem "Courier New", Courier, monospace;
-    white-space: nowrap;
+    white-space: pre;
+    word-wrap: normal;
     overflow-x: auto;
     overflow-y: hidden;
 }
