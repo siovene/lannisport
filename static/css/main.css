@@ -316,5 +316,6 @@ li {
 
 blockquote p {
     font-size: .875rem;
+    font-style: italic;
     color: #777;
 }
