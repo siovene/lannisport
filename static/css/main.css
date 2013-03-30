@@ -53,6 +53,7 @@ h1, h2 {
 
 .content section p {
     text-align: justify;
+    margin-bottom: 1.5rem;
 }
 
 #site-header h1 {
@@ -197,10 +198,10 @@ article footer {
 }
 
 article footer p {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
     color: #aaa;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 blockquote,
