@@ -103,8 +103,9 @@ h1, h2 {
 }
 
 #sidebar {
+    position: relative;
     background-image: url(../img/debut_dark.png);
-    padding: 0 2rem 1rem;
+    padding: .5rem 2rem 1rem;
     margin-top: -.5rem;
 
     -webkit-border-radius: 0px 0px 4px 4px;
@@ -112,6 +113,12 @@ h1, h2 {
 
     -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+#social-icons {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
 }
 
 #sidebar h2 {
