@@ -218,6 +218,10 @@ ul {
     list-style:none;
 }
 
+ol {
+    list-style: upper-roman;
+}
+
 pre, code {
     font: normal normal 400 .75rem/1rem "Courier New", Courier, monospace;
     white-space: pre;
