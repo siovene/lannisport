@@ -1,7 +1,7 @@
 Lannisport is a [Pelican] [1] theme. It can be seen live at http://iovene.com/.
 
 ## Preview
-[] [2]
+![] [2]
 
 ## Variables
 
