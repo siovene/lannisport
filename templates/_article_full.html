@@ -6,8 +6,27 @@
 
 {% block article_footer %}
     <footer>
-        <p>Posted in: <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a></p>
-        <p>Tagged as: {% for tag in article.tags %}<a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>{% if not loop.last %} / {% endif %}{% endfor %}</p>
-        <p>Wanna tell me what you think? <a href="{{SITEURL}}/{{CONTACT_URL}}">Get in touch.</a></p>
+        {% if article.category %}
+            <p>
+                Posted in:
+                <a href="{{SITEURL}}/{{article.category.url}}">
+                    {{article.category}}
+                </a>
+            </p>
+        {% endif %}
+
+        {% if article.tags %}
+            <p>Tagged as:
+                {% for tag in article.tags %}
+                    <a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>
+                    {% if not loop.last %} / {% endif %}
+                {% endfor %}
+            </p>
+        {% endif %}
+
+        {% if CONTACT_URL %}
+            <p>Wanna tell me what you think?
+            <a href="{{SITEURL}}/{{CONTACT_URL}}">Get in touch.</a></p>
+        {% endif %}
     </footer>
 {% endblock %}
