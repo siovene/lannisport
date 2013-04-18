@@ -45,7 +45,7 @@ h1, h2 {
 }
 
 .content section {
-    background: url(/theme/img/divider.png) no-repeat center bottom;
+    background: url(../img/divider.png) no-repeat center bottom;
     padding-bottom: 2rem;
 }
 
@@ -134,6 +134,8 @@ h1, h2 {
 
 #sidebar h2 {
     color: #f0f0f0;
+    -webkit-text-shadow: none;
+    text-shadow: none;
 }
 
 #navigation nav ul {
@@ -143,6 +145,8 @@ h1, h2 {
 #navigation nav li {
     font-size: 0.875rem;
     text-transform: uppercase;
+    background: none;
+    padding: 0;
 }
 
 #navigation nav li .separator {
@@ -159,7 +163,10 @@ h1, h2 {
 article h2, article h3, article h4, article h5, article h6 {
     margin-top: 2rem;
     text-transform: uppercase;
+
+    -webkit-text-shadow: none;
     text-shadow: none;
+
     font-weight: 700;
 }
 
@@ -191,7 +198,6 @@ article header h2 {
         top: .25rem;
         color: #e4e4e4;
 
-        -webkit-text-shadow: none;
         text-shadow: none;
     }
 }
@@ -250,11 +256,27 @@ p,
 pre,
 ul {
     font:normal normal 400 1.125rem/1.5rem Georgia, serif;
-    list-style:none;
 }
 
 ol {
     list-style: upper-roman;
+    color: #DC143C;
+}
+
+ol p {
+    color: #444;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+ul li {
+    background-image: url(../img/bullet.png);
+    background-repeat: no-repeat;
+    background-position: 0 0.175rem;
+    padding-left: 1.5rem;
 }
 
 pre, code {
