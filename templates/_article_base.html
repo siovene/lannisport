@@ -7,6 +7,9 @@
 
         {% block article_content %} {% endblock %}
         {% block article_footer %} {% endblock %}
-        </footer>
+
+        {% if DISQUS_SHORTNAME %}
+            {% block article_comments %} {% endblock %}
+        {% endif %}
     </article>
 </section>
