@@ -98,7 +98,7 @@ h1, h2 {
 
 #sidebar {
     position: relative;
-    background-image: url(../img/debut_dark.png);
+    background-image: url(../img/gray_sand.png);
     padding: .5rem 2rem 1rem;
     margin-top: -.5rem;
 
@@ -157,6 +157,8 @@ h1, h2 {
     background: none;
     margin: 0;
     padding: 0;
+    -webkit-text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
 }
 
 #navigation nav li .separator {
