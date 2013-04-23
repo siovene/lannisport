@@ -1,14 +1,13 @@
 html {
     overflow-y: scroll;
+    min-height: 100%;
 }
 
 body {
     background-image: url(../img/bg.png);
     border-top: .5rem solid #DC143C;
     color: #444;
-
-    -webkit-box-shadow: inset 0px .5rem 2rem 0px rgba(0, 0, 0, 0.33);
-    box-shadow: inset 0px .5rem 2rem 0px rgba(0, 0, 0, 0.33);
+    min-height: 100%;
 }
 
 a {
@@ -43,7 +42,7 @@ h1, h2 {
     margin-bottom: 3rem;
 }
 
-.content section {
+.content #index section {
     background: url(../img/divider.png) no-repeat center bottom;
     padding-bottom: 2rem;
 }
