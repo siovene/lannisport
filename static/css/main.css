@@ -440,3 +440,17 @@ blockquote p {
     font-style: italic;
     color: #777;
 }
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: small;
+    color: #bbb;
+    font-style: italic;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+    display: table;
+    border-bottom: 1px dotted #ddd;
+}
