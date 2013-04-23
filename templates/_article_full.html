@@ -1,14 +1,18 @@
 {% extends '_article_base.html' %}
 
-{% block article_content %}
-    {{article.content}}
-{% endblock %}
 
-{% block article_footer %}
-    <footer>
+{% block article_meta %}
+    <div class="article-meta article-meta-border">
+        <p>
+            <i class="icon-time"></i>
+            <time datetime="{{article.date.isoformat()}}">
+                {{article.date.strftime('%Y-%m-%d')}}
+            </time>
+        </p>
+
         {% if article.category %}
             <p>
-                Posted in:
+                <i class="icon-file"></i>
                 <a href="{{SITEURL}}/{{article.category.url}}">
                     {{article.category}}
                 </a>
@@ -16,7 +20,8 @@
         {% endif %}
 
         {% if article.tags %}
-            <p>Tagged as:
+            <p>
+                <i class="icon-tags"></i>
                 {% for tag in article.tags %}
                     <a href="{{SITEURL}}/{{tag.url}}">{{tag}}</a>
                     {% if not loop.last %} / {% endif %}
@@ -24,13 +29,23 @@
             </p>
         {% endif %}
 
-        {% if CONTACT_URL %}
-            <p>Wanna tell me what you think?
-            <a href="{{SITEURL}}/{{CONTACT_URL}}">Get in touch.</a></p>
-        {% endif %}
-    </footer>
+        <b class="border-notch notch"></b>
+        <b class="notch"></b>
+    </div>
 {% endblock %}
 
+{% block article_content %}
+    {{article.content}}
+{% endblock %}
+
+{% block article_footer %}
+    {% if CONTACT_URL %}
+        <footer>
+            <p>Wanna tell me what you think?
+            <a href="{{SITEURL}}/{{CONTACT_URL}}">Get in touch.</a></p>
+        </footer>
+    {% endif %}
+{% endblock %}
 
 {% block article_comments %}
     <div id="disqus_thread"></div>

@@ -31,17 +31,16 @@ h1, h2 {
     text-shadow: 0 1px 2px #aaa;
 }
 
+#logo {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1rem;
+    width: 100px;
+}
+
 .content section,
 #site-header, #site-footer {
     margin-bottom: 3rem;
-}
-
-#site-logo {
-    padding: 0 0 1.35rem;
-    margin-top: 2.15rem;
-    margin-left: -5rem;
-    height: 6rem;
-    width: 6rem;
 }
 
 .content section {
@@ -71,6 +70,7 @@ h1, h2 {
     font-weight: 700;
     line-height: 2.5rem;
     border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 0.5rem;
 }
 
 #site-header h1 small {
@@ -101,18 +101,6 @@ h1, h2 {
     padding-bottom: .5rem;
 }
 
-@media screen and (min-width: 768px) {
-    #site-header p:before {
-        display: block;
-        content: "\201C";
-        font-size: 4rem;
-        position: absolute;
-        left: -2.5rem;
-        top: 1.25rem;
-        color: #e4e4e4;
-    }
-}
-
 #sidebar {
     position: relative;
     background-image: url(../img/debut_dark.png);
@@ -126,10 +114,18 @@ h1, h2 {
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
-#social-icons {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
+#social-icons, #navigation {
+    text-align: center;
+}
+
+#social-icons a {
+    padding-left: 0.25rem;
+    color: white;
+}
+
+#social-icons a:hover {
+    padding-left: 0.25rem;
+    color: #bbb;
 }
 
 #sidebar h2 {
@@ -138,14 +134,24 @@ h1, h2 {
     text-shadow: none;
 }
 
+#navigation {
+    padding-bottom: 1.5rem;
+}
+
+#navigation nav {
+    padding-top: 1.5rem;
+}
+
 #navigation nav ul {
     margin: 0;
+    padding: 0;
 }
 
 #navigation nav li {
     font-size: 0.875rem;
     text-transform: uppercase;
     background: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -154,14 +160,8 @@ h1, h2 {
     color: #999;
 }
 
-@media screen and (min-width: 768px) {
-    #site-header, #site-footer, .content {
-        padding: 0 3rem;
-    }
-}
-
 article h2, article h3, article h4, article h5, article h6 {
-    margin-top: 2rem;
+    margin-top: 0;
     text-transform: uppercase;
 
     -webkit-text-shadow: none;
@@ -178,43 +178,81 @@ article h3 {
     font-size: 1rem;
 }
 
-article header {
+header.article {
     margin-bottom: 1rem;
 }
 
-article header h2 {
+header.article h2 {
     font-weight: 700;
+    line-height: 1.25rem;
     margin-bottom: 0;
     position: relative;
 }
 
-@media screen and (min-width: 768px) {
-    article header h2:before {
-        display: block;
-        content: "\00b6";
-        font-size: 2rem;
-        position: absolute;
-        left: -1.75rem;
-        top: .25rem;
-        color: #e4e4e4;
-
-        text-shadow: none;
-    }
-}
-
-article header h2 a {
+header.article h2 a {
     color: #000000;
 }
 
-article header time {
-    color: #ccc;
-    font-style: italic;
-    margin-top: 0.25rem;
-    display: block;
+.article-meta {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    background-color: rgb(252, 255, 244);
+
+    -webkit-box-shadow: 0 0 48px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 0 48px 0 rgba(0,0,0,0.15);
 }
 
-article header time:before {
-    content: "\2014\A0";
+.article-meta .notch {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    margin: 0;
+    border-top: 5px solid transparent;
+    border-right: 0;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgb(252, 255, 244);
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+     /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+.article-meta-border {
+    border: 1px solid rgb(233, 233, 233);
+}
+
+.article-meta-border .border-notch {
+    border-left-color: rgb(233, 233, 233);
+    right: -11px;
+}
+
+@media screen and (max-width: 767px) {
+    .article-meta .notch {
+        display: none;
+    }
+}
+
+.article-meta time, .article-meta p {
+    color: #ccc;
+    font-style: italic;
+    font-size: 0.666rem;
+    line-height: 1rem;
+    margin: 0;
+}
+
+.article-meta i {
+    padding-right: 0.5rem;
+}
+
+.article-meta a {
+    color: #F8BFCA;
 }
 
 article img {

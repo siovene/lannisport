@@ -18,6 +18,7 @@
 
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="{{SITEURL}}/theme/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/colorbox.css">
 
         <link rel="stylesheet" href="{{SITEURL}}/theme/css/main.css">
@@ -31,102 +32,115 @@
 
         <div class="container">
             <div class="row">
-                <div class="span8">
-                    <header id="site-header">
-                        <div id="site-header-content">
-                            <h1>
-                                <a href="{{SITEURL}}">{{SITENAME}}</a>
-                                <small>
-                                    <span class="divider">/</span> {{SITETAGLINE}}
-                                </small>
-                            </h1>
-                            <p>
-                                {{SITEDESCR}}
-                            </p>
+                <div class="span9">
+
+                    <div class="row">
+                        <div class="span2"> <!-- logo -->
+                            <div id="logo">
+                                <a href="{{SITEURL}}">
+                                    <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
+                                </a>
+                            </div> <!-- logo -->
+                        </div> <!-- logo span -->
+
+                        <div class="span7"> <!-- header -->
+                            <header id="site-header">
+                                <div id="site-header-content">
+                                    <h1>
+                                        <a href="{{SITEURL}}">{{SITENAME}}</a>
+                                        <small>
+                                            <span class="divider">/</span> {{SITETAGLINE}}
+                                        </small>
+                                    </h1>
+                                    <p>
+                                        {{SITEDESCR}}
+                                    </p>
+                                </div>
+                            </header>
+                        </div> <!-- header span -->
+                    </div> <!-- header row -->
+
+                    <div class="row"> <!-- content -->
+                        <div class="content">
+                            {% block content %}{% endblock %}
                         </div>
-                    </header>
+                    </div> <!-- content row -->
 
-                    <div class="content">
-                        {% block content %}{% endblock %}
-                    </div>
-
-                    <footer id="site-footer">
-                        <p>
-                            <a href="{{LICENSE_URL}}" target="_blank">
-                                {{LICENSE_NAME}}
-                            </a> {{AUTHOR}} /
-                            <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
-                        </p>
-                        <p>
-                            Powered by
-                            <a href="https://github.com/getpelican/pelican" target="_blank">
-                                Pelican
-                            </a>
-                            /
-                            Source code on
-                            <a href="http://github.com/siovene/iovene.com" target="blank">
-                                GitHub
-                            </a>
-                            /
-                            Theme <code>Lannisport</code>, also on
-                            <a href="http://github.com/siovene/lannisport" target="_blank">
-                                GitHub
-                            </a>
-                        </p>
-                    </footer>
+                    <div class="row"> <!-- footer -->
+                        <div class="span7 offset2">
+                            <footer id="site-footer">
+                                <p>
+                                    <a href="{{LICENSE_URL}}" target="_blank">
+                                        {{LICENSE_NAME}}
+                                    </a> {{AUTHOR}} /
+                                    <a href="{{SITEURL}}/{{ARCHIVES_URL}}">Archives</a>
+                                </p>
+                                <p>
+                                    Powered by
+                                    <a href="https://github.com/getpelican/pelican" target="_blank">
+                                        Pelican
+                                    </a>
+                                    /
+                                    Source code on
+                                    <a href="http://github.com/siovene/iovene.com" target="blank">
+                                        GitHub
+                                    </a>
+                                    /
+                                    Theme <code>Lannisport</code>, also on
+                                    <a href="http://github.com/siovene/lannisport" target="_blank">
+                                        GitHub
+                                    </a>
+                                </p>
+                            </footer>
+                        </div> <!-- footer span -->
+                    </div> <!-- footer row -->
                 </div> <!-- header+content+footer span -->
 
-                <div class="span4">
+                <div class="span3">
                     <aside id="sidebar">
                         <div id="social-icons">
                             {% if GITHUB_URL %}
                                 <span class="social-icon">
                                     <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
-                                        <img src="{{SITEURL}}/theme/img/GitHub.png" alt="GitHub"/>
+                                        <i class="icon-github-alt"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if LINKEDIN_URL %}
                                 <span class="social-icon">
                                     <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
-                                        <img src="{{SITEURL}}/theme/img/LinkedIn.png" alt="LinkedIn"/>
+                                        <i class="icon-linkedin"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if TWITTER_URL %}
                                 <span class="social-icon">
                                     <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
-                                        <img src="{{SITEURL}}/theme/img/Twitter.png" alt="Twitter"/>
+                                        <i class="icon-twitter"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if GOOGLE_URL %}
                                 <span class="social-icon">
                                     <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
-                                        <img src="{{SITEURL}}/theme/img/Google.png" alt="Google"/>
+                                        <i class="icon-google-plus"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if FACEBOOK_URL %}
                                 <span class="social-icon">
                                     <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
-                                        <img src="{{SITEURL}}/theme/img/Facebook.png" alt="Facebook"/>
+                                        <i class="icon-facebook"></i>
                                     </a>
                                 </span>
                             {% endif %}
                             {% if FLICKR_URL %}
                                 <span class="social-icon">
                                     <a href="{{FLICKR_URL}}" target="_blank" title="Flickr">
-                                        <img src="{{SITEURL}}/theme/img/Flickr.png" alt="Flickr"/>
+                                        <i class="icon-camera"></i>
                                     </a>
                                 </span>
                             {% endif %}
-                        </div>
-
-                        <div id="site-logo">
-                            <a href="{{SITEURL}}">
-                                <img alt="{{SITENAME}}" src="/static/{{SITELOGO}}" />
-                            </a>
                         </div>
 
                         <div id="navigation">

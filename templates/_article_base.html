@@ -1,15 +1,23 @@
-<section>
-    <article>
-        <header>
-            <h2><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h2>
-            <time datetime="{{article.date.isoformat()}}">{{article.locale_date}}</time>
-        </header>
+<div class="span7 offset2">
+    <header class="article">
+        <h2><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h2>
+    </header>
+</div>
 
-        {% block article_content %} {% endblock %}
-        {% block article_footer %} {% endblock %}
+<div class="span2">
+    {% block article_meta %}
+    {% endblock %}
+</div>
 
-        {% if DISQUS_SHORTNAME %}
-            {% block article_comments %} {% endblock %}
-        {% endif %}
-    </article>
-</section>
+<div class="span7">
+    <section>
+        <article>
+            {% block article_content %} {% endblock %}
+            {% block article_footer %} {% endblock %}
+
+            {% if DISQUS_SHORTNAME %}
+                {% block article_comments %} {% endblock %}
+            {% endif %}
+        </article>
+    </section>
+</div> <!-- span -->
