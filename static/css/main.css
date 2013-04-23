@@ -48,11 +48,6 @@ h1, h2 {
     padding-bottom: 2rem;
 }
 
-.content section:last-of-type {
-    background: none;
-    padding-bottom: 0;
-}
-
 .content section p {
     margin-bottom: 1.5rem;
 }
@@ -114,6 +109,10 @@ h1, h2 {
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.5);
 }
 
+#social-icons {
+    margin-bottom: 2rem;
+}
+
 #social-icons, #navigation {
     text-align: center;
 }
@@ -139,7 +138,12 @@ h1, h2 {
 }
 
 #navigation nav {
-    padding-top: 1.5rem;
+}
+
+#navigation nav:first-child {
+    padding-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    background: url(../img/divider-star.png) no-repeat center bottom;
 }
 
 #navigation nav ul {
