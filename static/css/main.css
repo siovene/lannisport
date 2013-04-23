@@ -160,7 +160,7 @@ h1, h2 {
     color: #999;
 }
 
-article h2, article h3, article h4, article h5, article h6 {
+article h3, article h4, article h5, article h6 {
     margin-top: 0;
     text-transform: uppercase;
 
@@ -170,7 +170,7 @@ article h2, article h3, article h4, article h5, article h6 {
     font-weight: 700;
 }
 
-article h2 {
+header.article h2 {
     font-size: 1.25rem;
 }
 
