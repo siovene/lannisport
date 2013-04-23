@@ -30,6 +30,12 @@ h1, h2 {
     text-shadow: 0 1px 2px #aaa;
 }
 
+hr {
+    height: 40px;
+    border: 0;
+    background: url(../img/divider.png) no-repeat center center;
+}
+
 #logo {
     text-align: center;
     margin: 0 auto;
