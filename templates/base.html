@@ -97,58 +97,68 @@
                 </div> <!-- header+content+footer span -->
 
                 <div class="span3">
-                    <aside id="sidebar">
-                        <div id="social-icons">
-                            {% if GITHUB_URL %}
-                                <span class="social-icon">
-                                    <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
-                                        <i class="icon-github-alt"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if LINKEDIN_URL %}
-                                <span class="social-icon">
-                                    <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
-                                        <i class="icon-linkedin"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if TWITTER_URL %}
-                                <span class="social-icon">
-                                    <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
-                                        <i class="icon-twitter"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if GOOGLE_URL %}
-                                <span class="social-icon">
-                                    <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
-                                        <i class="icon-google-plus"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if FACEBOOK_URL %}
-                                <span class="social-icon">
-                                    <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
-                                        <i class="icon-facebook"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                            {% if FLICKR_URL %}
-                                <span class="social-icon">
-                                    <a href="{{FLICKR_URL}}" target="_blank" title="Flickr">
-                                        <i class="icon-camera"></i>
-                                    </a>
-                                </span>
-                            {% endif %}
-                        </div>
+                    <aside class="affix">
+                        <div id="sidebar">
+                            <div id="social-icons">
+                                {% if GITHUB_URL %}
+                                    <span class="social-icon">
+                                        <a href="{{GITHUB_URL}}" target="_blank" title="GitHub">
+                                            <i class="icon-github-alt"></i>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                                {% if LINKEDIN_URL %}
+                                    <span class="social-icon">
+                                        <a href="{{LINKEDIN_URL}}" target="_blank" title="LinkedIn">
+                                            <i class="icon-linkedin"></i>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                                {% if TWITTER_URL %}
+                                    <span class="social-icon">
+                                        <a href="{{TWITTER_URL}}" target="_blank" title="Twitter">
+                                            <i class="icon-twitter"></i>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                                {% if GOOGLE_URL %}
+                                    <span class="social-icon">
+                                        <a href="{{GOOGLE_URL}}" target="_blank" title="Google">
+                                            <i class="icon-google-plus"></i>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                                {% if FACEBOOK_URL %}
+                                    <span class="social-icon">
+                                        <a href="{{FACEBOOK_URL}}" target="_blank" title="Facebook">
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                                {% if FLICKR_URL %}
+                                    <span class="social-icon">
+                                        <a href="{{FLICKR_URL}}" target="_blank" title="Flickr">
+                                            <i class="icon-camera"></i>
+                                        </a>
+                                    </span>
+                                {% endif %}
+                            </div>
 
-                        <div id="navigation">
-                            {% include 'navigation.html' %}
-                        </div>
+                            <div id="navigation">
+                                {% include 'navigation.html' %}
+                            </div>
+                        </div> <!-- sidebar -->
+
+                        <p id="back-to-top">
+                            <a href="#">
+                                <i class="icon-double-angle-up"></i> Back to top
+                            </a>
+                        </p>
+
                     </aside>
                 </div> <!-- logo+navigation span -->
             </div> <!-- row -->
+
         </div> <!-- /container -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -102,10 +102,11 @@ hr {
 }
 
 #sidebar {
-    position: relative;
     background-image: url(../img/gray_sand.png);
+    border-top: 0.5rem solid #DC143C;
     padding: .5rem 2rem 1rem;
-    margin-top: -.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
 
     -webkit-border-radius: 0px 0px 4px 4px;
     border-radius: 0px 0px 4px 4px;
@@ -169,6 +170,14 @@ hr {
 #navigation nav li .separator {
     padding: .5rem 0;
     color: #999;
+}
+
+#back-to-top {
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    font-size: small;
+    display: none;
 }
 
 article h3, article h4, article h5, article h6 {
