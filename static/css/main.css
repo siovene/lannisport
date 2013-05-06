@@ -54,7 +54,7 @@ hr {
 }
 
 .content section p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 #index .article-summary img {
@@ -72,12 +72,14 @@ hr {
 
 #index #older-entries {
     background-color: #DC143C;
-    color: white;
+    color: #eee;
     display: block;
     padding: 1rem;
+    margin-left: -1rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
 
     -webkit-text-shadow: none;
     text-shadow: none;
@@ -341,7 +343,7 @@ ol,
 p,
 pre,
 ul {
-    font:normal normal 400 1.125rem/1.5rem Georgia, serif;
+    font:normal normal 400 1rem/1.125rem Georgia, serif;
 }
 
 ol {
