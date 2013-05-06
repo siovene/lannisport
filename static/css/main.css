@@ -61,13 +61,15 @@ hr {
     display: none;
 }
 
-#index #first-article {
-    -moz-column-count: 2;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 20px;
-    column-count: 2;
-    column-gap: 20px;
+@media screen and (min-width: 768px) {
+    #index #first-article {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+    }
 }
 
 #index #older-entries {
@@ -228,15 +230,17 @@ header.article h2 {
     position: relative;
 }
 
-#index header.article h2:before {
-    display: block;
-    content: "\00b6";
-    font-size: 2rem;
-    position: absolute;
-    left: -1.75rem;
-    top: .25rem;
-    color: #e4e4e4;
-    text-shadow: none;
+@media screen and (min-width: 768px) {
+    #index header.article h2:before {
+        display: block;
+        content: "\00b6";
+        font-size: 2rem;
+        position: absolute;
+        left: -1.75rem;
+        top: .25rem;
+        color: #e4e4e4;
+        text-shadow: none;
+    }
 }
 
 header.article h2 a {
