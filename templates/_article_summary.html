@@ -1,7 +1,9 @@
 {% extends '_article_base.html' %}
 
 {% block article_content %}
-    {{article.summary}}
+    <div class="article-summary">
+        {{article.summary}}
+    </div>
 
     <p class="readmore">
         <a href="{{SITEURL}}/{{article.url}}">(read more)</a>

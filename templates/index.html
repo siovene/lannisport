@@ -3,7 +3,15 @@
 {% block content %}
     <div id="index">
         {% for article in dates_page.object_list %}
-            {% include '_article_summary.html' %}
+            {% if loop.first and articles_page.number == 1 %}
+                {% include '_first_article_summary.html' %}
+
+                <div class="span7 offset2">
+                    <h2 id="older-entries">Older entries</h2>
+                </div>
+            {% else %}
+                {% include '_article_summary.html' %}
+            {% endif %}
 
             {% if loop.last and (dates_page.has_previous()
             or not dates_page.has_previous() and loop.length > 1) %}
