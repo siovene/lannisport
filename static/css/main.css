@@ -242,19 +242,6 @@ header.article h2 {
     position: relative;
 }
 
-@media screen and (min-width: 768px) {
-    #index header.article h2:before {
-        display: block;
-        content: "\00b6";
-        font-size: 2rem;
-        position: absolute;
-        left: -1.75rem;
-        top: .25rem;
-        color: #e4e4e4;
-        text-shadow: none;
-    }
-}
-
 header.article h2 a {
     color: #000000;
 }
