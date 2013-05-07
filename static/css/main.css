@@ -43,6 +43,18 @@ hr {
     width: 100px;
 }
 
+@media screen and (min-width: 768px) {
+    .content {
+        background-image: url(../img/page_shadow_background.png);
+        background-repeat: no-repeat;
+        background-position-x: 4rem;
+        background-position-y: 0;
+
+        padding-top: 2rem;
+        overflow: hidden;
+    }
+}
+
 .content section,
 #site-header, #site-footer {
     margin-bottom: 3rem;
