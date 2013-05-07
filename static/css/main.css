@@ -47,10 +47,10 @@ hr {
     .content {
         background-image: url(../img/page_shadow_background.png);
         background-repeat: no-repeat;
-        background-position-x: 4rem;
+        background-position-x: 6.5rem;
         background-position-y: 0;
 
-        padding-top: 2rem;
+        padding-top: 1.5rem;
         overflow: hidden;
     }
 }
