@@ -2,19 +2,21 @@
 
 {% block title %}{{page.title|striptags}} / {{SITENAME}}{% endblock %}
 {% block content %}
-    <div class="span7 offset2">
-        <section>
-            <article>
-                <header class="article">
-                    <h2>
-                        <a href="{{SITEURL}}/{{page.url}}" rel="bookmark">
-                            {{page.title}}
-                        </a>
-                    </h2>
-                </header>
+    <div class="article-page">
+        <div class="span7 offset2">
+            <section>
+                <article>
+                    <header class="article">
+                        <h2>
+                            <a href="{{SITEURL}}/{{page.url}}" rel="bookmark">
+                                {{page.title}}
+                            </a>
+                        </h2>
+                    </header>
 
-                {{page.content}}
-            </article>
-        </section>
+                    {{page.content}}
+                </article>
+            </section>
+        </div>
     </div>
 {% endblock %}

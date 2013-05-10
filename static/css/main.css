@@ -44,16 +44,23 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-    .content {
+    .article-page {
         background-image: url(../img/page_shadow_background.png);
         background-repeat: no-repeat;
-        background-position-x: 8rem;
+        background-position-x: 6rem;
         background-position-y: 0;
 
         padding-top: 1.25rem;
         overflow: hidden;
     }
 }
+
+@media screen and (min-width: 980px) {
+    .article-page {
+        background-position-x: 8rem;
+    }
+}
+
 
 .content section,
 #site-header, #site-footer {
@@ -67,10 +74,6 @@ hr {
 
 .content section p {
     margin-bottom: 1rem;
-}
-
-#index .article-summary img {
-    display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -88,8 +91,8 @@ hr {
     background-color: #DC143C;
     color: #eee;
     display: block;
-    padding: 1rem;
-    margin-left: -1rem;
+    padding: 0.75rem 1.75rem;
+    margin-left: 9.5rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
     font-size: 1.125rem;
@@ -98,6 +101,25 @@ hr {
     -webkit-text-shadow: none;
     text-shadow: none;
 }
+
+@media screen and (max-width: 767px) {
+    #index #older-entries {
+        margin-left: -1.75rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #index #older-entries {
+        margin-left: 7.5rem;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    #index #older-entries {
+        margin-left: 9.5rem;
+    }
+}
+
 
 #site-header h1 {
     font-size: 1.5rem;

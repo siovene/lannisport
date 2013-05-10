@@ -5,11 +5,11 @@
         {% for article in dates_page.object_list %}
             {% if loop.first and articles_page.number == 1 %}
                 {% include '_first_article_summary.html' %}
-
-                <div class="span7 offset2">
-                    <h2 id="older-entries">Older entries</h2>
-                </div>
             {% else %}
+                {% if loop.index == 2 %}
+                    <h2 id="older-entries">Older entries</h2>
+                {% endif %}
+
                 {% include '_article_summary.html' %}
             {% endif %}
 

@@ -1,23 +1,25 @@
-<div class="span7 offset2">
-    <header class="article">
-        <h2><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h2>
-    </header>
+<div class="article-page">
+    <div class="span7 offset2">
+        <header class="article">
+            <h2><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h2>
+        </header>
+    </div>
+
+    <div class="span2">
+        {% block article_meta %}
+        {% endblock %}
+    </div>
+
+    <div class="span7">
+        <section>
+            <article>
+                {% block article_content %} {% endblock %}
+                {% block article_footer %} {% endblock %}
+
+                {% if DISQUS_SHORTNAME %}
+                    {% block article_comments %} {% endblock %}
+                {% endif %}
+            </article>
+        </section>
+    </div> <!-- span -->
 </div>
-
-<div class="span2">
-    {% block article_meta %}
-    {% endblock %}
-</div>
-
-<div class="span7">
-    <section>
-        <article>
-            {% block article_content %} {% endblock %}
-            {% block article_footer %} {% endblock %}
-
-            {% if DISQUS_SHORTNAME %}
-                {% block article_comments %} {% endblock %}
-            {% endif %}
-        </article>
-    </section>
-</div> <!-- span -->
