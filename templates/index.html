@@ -6,10 +6,6 @@
             {% if loop.first and articles_page.number == 1 %}
                 {% include '_first_article_summary.html' %}
             {% else %}
-                {% if loop.index == 2 %}
-                    <h2 id="older-entries">Older entries</h2>
-                {% endif %}
-
                 {% include '_article_summary.html' %}
             {% endif %}
 
