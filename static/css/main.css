@@ -285,17 +285,6 @@ header.article h2 a {
     color: #F8BFCA;
 }
 
-@media screen and (min-width: 768px) {
-    article.entry {
-        -moz-column-count: 2;
-        -moz-column-gap: 20px;
-        -webkit-column-count: 2;
-        -webkit-column-gap: 20px;
-        column-count: 2;
-        column-gap: 20px;
-    }
-}
-
 article img {
     -webkit-border-radius: 4px;
     border-radius: 4px;
