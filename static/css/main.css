@@ -337,14 +337,15 @@ ol p {
 
 ul {
     list-style: none;
-    padding-left: 0.5rem;
+    margin-left: 0;
 }
 
 ul li {
     background-image: url(../img/bullet.png);
     background-repeat: no-repeat;
     background-position: 0 0.175rem;
-    padding-left: 1.5rem;
+    padding-left: 1.25rem;
+    line-height: 1.125rem;
 }
 
 pre, code {
