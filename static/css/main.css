@@ -238,6 +238,27 @@ header.article h2 a {
     box-shadow: 0 0 48px 0 rgba(0,0,0,0.15);
 }
 
+.article-meta dl {
+    color: #ccc;
+    font-style: italic;
+    font-size: 0.666rem;
+    line-height: 1rem;
+    margin: 0;
+}
+
+.article-meta dl dt {
+    width: 20px;
+    text-align: center;
+}
+
+.article-meta dl.dl-horizontal dd {
+    margin-left: 20px;
+}
+
+.article-meta .separator {
+    color: rgb(224, 230, 208);
+}
+
 .article-meta .notch {
     position: absolute;
     top: 5px;
@@ -274,16 +295,9 @@ header.article h2 a {
     }
 }
 
-.article-meta time, .article-meta p {
-    color: #ccc;
-    font-style: italic;
-    font-size: 0.666rem;
-    line-height: 1rem;
-    margin: 0;
-}
-
 .article-meta i {
     padding-right: 0.5rem;
+    color: #999;
 }
 
 .article-meta a {
