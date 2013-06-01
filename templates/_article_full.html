@@ -3,13 +3,6 @@
 
 {% block article_meta %}
     <div class="article-meta article-meta-border">
-        <p>
-            <i class="icon-time"></i>
-            <time datetime="{{article.date.isoformat()}}">
-                {{article.date.strftime('%Y-%m-%d')}}
-            </time>
-        </p>
-
         {% if article.category %}
             <p>
                 <i class="icon-file"></i>

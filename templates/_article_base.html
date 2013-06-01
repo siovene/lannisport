@@ -2,6 +2,9 @@
     <div class="span7 offset2">
         <header class="article">
             <h2><a href="{{SITEURL}}/{{article.url}}" rel="bookmark">{{article.title}}</a></h2>
+            <time datetime="{{article.date.isoformat()}}">
+                {{article.date.strftime("%b %d, %Y")}}
+            </time>
         </header>
     </div>
 

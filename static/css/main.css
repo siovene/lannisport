@@ -204,6 +204,11 @@ header.article h2 {
     font-size: 1.25rem;
 }
 
+header.article time {
+    font-size: x-small;
+    color: #999;
+}
+
 article h3 {
     font-size: 1rem;
 }
